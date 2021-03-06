@@ -31,12 +31,21 @@ namespace DataAccess.Concrete.InMemory
         }
 
         public void Update(Product product){
-            throw new System.NotImplementedException();
+            Product obj = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
+            obj.CategoryId = product.CategoryId;
+            obj.ProductId = product.ProductId;
+            obj.ProductName = product.ProductName;
+            obj.UnitsInStock = product.UnitsInStock;
+            obj.UnitPrice = product.UnitPrice;
         }
 
         //2.10 7.d
         public void Delete(Product product){
             _products.SingleOrDefault(p => p.ProductId == product.ProductId);
+        }
+
+        public List<Product> GetAllByCategory(int categoryID){
+            return _products.Where(p => p.CategoryId == categoryID).ToList();
         }
 
     }
