@@ -12,7 +12,7 @@
       <schema-mapping>
         <introspection-scope>
           <node kind="database" qname="Northwind">
-            <node kind="schema" negative="1" />
+            <node kind="schema" qname="dbo" />
           </node>
         </introspection-scope>
       </schema-mapping>
