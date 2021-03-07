@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq.Expressions;
 using Entities.Concrete;
 
 namespace DataAccess.Abstract
@@ -7,12 +9,12 @@ namespace DataAccess.Abstract
     public interface IEntityRepository<T>
     {
 
-        List<T> GetAll();
+        List<T> GetAll(Expression<Func<T, bool>> filter = null);
+        T Get(Expression<Func<T, bool>> filter);
         void Add(T product);
         void Update(T product);
         void Delete(T product);
-
-        List<T> GetAllByCategory(int categoryID);
+        
 
     }
 
