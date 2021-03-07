@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<dataSource name="@localhost">
+<dataSource name="Northwind@localhost">
   <database-model serializer="dbm" dbms="MSSQL" family-id="MSSQL" format-version="4.20">
     <root id="1">
       <ServerVersion>15.0.2000</ServerVersion>
@@ -45,12 +45,12 @@
 6|database||0|view any column master key definition|G
 6|database||1|connect|G
 </Grants>
+      <Current>1</Current>
       <Collation>Latin1_General_CI_AS</Collation>
-      <Fingerprint>1.37717/00000000-0000-0000-0000-000000000000@LAPTOP-CS8B5IQQ</Fingerprint>
+      <Fingerprint>6.44260/03BED3BB-BC22-40AF-9231-BDE76D567941@LAPTOP-CS8B5IQQ</Fingerprint>
     </database>
     <database id="3" parent="1" name="master">
       <ObjectId>1</ObjectId>
-      <Current>1</Current>
       <Collation>Latin1_General_CI_AS</Collation>
     </database>
     <database id="4" parent="1" name="model">
@@ -67,6 +67,7 @@
     </database>
     <login id="7" parent="1" name="sa">
       <ObjectId>1</ObjectId>
+      <Enabled>1</Enabled>
       <DefaultDatabase>master</DefaultDatabase>
     </login>
     <login id="8" parent="1" name="public">
@@ -205,48 +206,38 @@
     </schema>
     <schema id="33" parent="2" name="db_accessadmin">
       <ObjectId>16385</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.303</IntrospectionTimestamp>
     </schema>
     <schema id="34" parent="2" name="db_backupoperator">
       <ObjectId>16389</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.307</IntrospectionTimestamp>
     </schema>
     <schema id="35" parent="2" name="db_datareader">
       <ObjectId>16390</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.310</IntrospectionTimestamp>
     </schema>
     <schema id="36" parent="2" name="db_datawriter">
       <ObjectId>16391</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.313</IntrospectionTimestamp>
     </schema>
     <schema id="37" parent="2" name="db_ddladmin">
       <ObjectId>16387</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.317</IntrospectionTimestamp>
     </schema>
     <schema id="38" parent="2" name="db_denydatareader">
       <ObjectId>16392</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.320</IntrospectionTimestamp>
     </schema>
     <schema id="39" parent="2" name="db_denydatawriter">
       <ObjectId>16393</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.323</IntrospectionTimestamp>
     </schema>
     <schema id="40" parent="2" name="db_owner">
       <ObjectId>16384</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.327</IntrospectionTimestamp>
     </schema>
     <schema id="41" parent="2" name="db_securityadmin">
       <ObjectId>16386</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.330</IntrospectionTimestamp>
     </schema>
     <schema id="42" parent="2" name="dbo">
       <ObjectId>1</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.333</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2021-03-07.20:39:33.877</IntrospectionTimestamp>
       <Current>1</Current>
     </schema>
     <schema id="43" parent="2" name="guest">
       <ObjectId>2</ObjectId>
-      <IntrospectionTimestamp>2021-03-06.19:21:08.347</IntrospectionTimestamp>
     </schema>
     <schema id="44" parent="2" name="sys">
       <ObjectId>4</ObjectId>

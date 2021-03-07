@@ -1,4 +1,6 @@
-﻿using Entities.Concrete;
+﻿using System;
+using System.Diagnostics;
+using Entities.Concrete;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete.EntityFramework
@@ -6,9 +8,9 @@ namespace DataAccess.Concrete.EntityFramework
     public class NorthwindContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder){
-            optionsBuilder.UseSqlServer(@"jdbc:sqlserver://localhost;
-                                        Database=Northwind;Trusted_Connection=true");
-         }
+            optionsBuilder.UseSqlServer(@"Server=(localdb)\MSSQLLocalDB; 
+database=northwind;trusted_connection=true;User Id=furkan; password =123456");
+        }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
