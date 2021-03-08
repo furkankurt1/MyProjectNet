@@ -8,7 +8,7 @@ namespace ConsoleUI {
 
         static void Main(string[] args){
             ProductManager newManager = new ProductManager(new EfProductDal());
-            foreach (var VARIABLE in newManager.GetAll())
+            foreach (var VARIABLE in newManager.GetAllbyProductId(1))
             {
                 Console.WriteLine(VARIABLE.ProductName);
             }

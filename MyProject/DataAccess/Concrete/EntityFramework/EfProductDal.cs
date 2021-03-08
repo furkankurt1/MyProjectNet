@@ -12,7 +12,8 @@ namespace DataAccess.Concrete.EntityFramework
     public class EfProductDal : IProductDal
     {
 
-        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null){
+        public List<Product> GetAll(Expression<Func<Product, bool>> filter = null)
+        {
             using (NorthwindContext context = new NorthwindContext())
             {
                 return filter == null
@@ -21,14 +22,16 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public Product Get(Expression<Func<Product, bool>> filter){
+        public Product Get(Expression<Func<Product, bool>> filter)
+        {
             using (NorthwindContext context = new NorthwindContext())
             {
                 return context.Set<Product>().SingleOrDefault(filter);
             }
         }
 
-        public void Add(Product product){
+        public void Add(Product product)
+        {
             using (NorthwindContext context = new NorthwindContext())
             {
                 var addedEntity = context.Entry(product);
@@ -37,7 +40,8 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public void Update(Product product){
+        public void Update(Product product)
+        {
             using (NorthwindContext context = new NorthwindContext())
             {
                 var updatedEntity = context.Entry(product);
@@ -46,7 +50,8 @@ namespace DataAccess.Concrete.EntityFramework
             }
         }
 
-        public void Delete(Product product){
+        public void Delete(Product product)
+        {
             using (NorthwindContext context = new NorthwindContext())
             {
                 var deletedEntity = context.Entry(product);
